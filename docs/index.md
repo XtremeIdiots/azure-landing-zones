@@ -68,3 +68,9 @@ There is a 'weirdness' or potential anti-pattern here as in the examples there i
 ## Next Step - Policies
 
 First stage of this is to add the custom policy definitions - this is a straightforward add. We then need to dive into the assignments, There are some default enterprise scale policies that I do not want etc.
+
+Didn't clock that the assignments aren't until further down in the process, as such moving on to...
+
+## Next Steps - Logging
+
+This is a straightforward module add. It is highlighting though the need to have a parameters file for this management.bicep I have. Also raises questions on if I am putting too much into this file and losing the modular approach.
