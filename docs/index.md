@@ -42,6 +42,12 @@ Some of the discussions look to be here:
 
 So, for now it looks like I need to host these 'modules' myself in an Azure Container Registry and then consume them. Which looks to be the case as there are a couple of scripts included in the ALZ-Bicep repo.
 
-Trying those scripts out though results in not all of the modules being deployed so have raised an [issue](https://github.com/Azure/ALZ-Bicep/issues/186).
+### Proceeding Anyway
 
-Fundamentally it is not clear what the best practice is though so have also raised a [question](https://github.com/Azure/ALZ-Bicep/issues/187).
+Trying those scripts out though results in not all of the modules being deployed so have raised an [issue](https://github.com/Azure/ALZ-Bicep/issues/186). Fundamentally it is not clear what the best practice is though so have also raised a [question](https://github.com/Azure/ALZ-Bicep/issues/187).
+
+In any case for the script that was provided I had to modify to: <https://github.com/frasermolyneux/ALZ-Bicep/blob/main/docs/scripts/createRGandcallBicep.ps1> to allow for publishing of all modules and to be able to specify the name of the ACR instance.
+
+## Next Step - Deploy some resources
+
+TODO
