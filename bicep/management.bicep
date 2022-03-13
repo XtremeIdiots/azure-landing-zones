@@ -109,3 +109,15 @@ module subscriptionPlacementSandbox 'br:acrxibicepprivate.azurecr.io/bicep/modul
     parTargetManagementGroupId: managementGroups.outputs.outSandboxMGName
   }
 }
+
+module customPolicyAssignments 'modules/policyAssignments/policyAssignments.bicep' = {
+  dependsOn: [
+    customPolicyDefinitions
+  ]
+  name: 'customPolicyAssignments'
+  scope: managementGroup('alz')
+  params: {
+    parTopLevelManagementGroupPrefix: 'alz'
+    parLogAnalyticsWorkspaceResourceID: platformLogging.outputs.outLogAnalyticsWorkspaceId
+  }
+}

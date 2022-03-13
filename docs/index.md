@@ -96,3 +96,7 @@ I don't like the naming of the parTargetManagementGroupId param also as it's not
 Additionally, this is probably where I would want to start splitting stuff out into more logical deployment phases.
 
 ## Next Steps - Policy Assignments
+
+So looking at this the ALZ-Bicep documentation under the deployment flow has an alzDefaults 'module' which is not so straightforward to understand. There are some odd bits in there, understandable things but odd when reading.
+
+So what am I trying to accomplish? at present I am really just looking for the logging/diagnostic policies - my thoughts then are to essentially implement my own version of the `alzDefaults` module.
