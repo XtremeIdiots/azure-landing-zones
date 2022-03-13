@@ -50,4 +50,19 @@ In any case for the script that was provided I had to modify to: <https://github
 
 ## Next Step - Deploy some resources
 
-TODO
+So - first steps for me are to try and do this locally, I already have an account that has the prerequisites.
+
+Unlike the examples that are provided in the ALZ-Bicep repo I can't see a way to reference the module directly as a template from the ACR. That is in the examples `az deployment` is called referencing the module .bicep file, once that module is published then it can't be referenced in the same way. As such a wrapper is needed.
+
+Following on from the `deployment model` documentation I will create a .bicep file for each stage in this repo which will call the various remote modules.
+
+As such I have created [bicep/management.bicep](/bicep/management.bicep) that will deploy the:
+
+* Management Groups
+* Custom RBAC Role Definitions
+
+also a local script to run this: [manual/localDeploy.azcli](/manual/localDeploy.azcli)
+
+There is a 'weirdness' or potential anti-pattern here as in the examples there is the ability to breakdown the pipeline with a task per deployment whereas this is 'grouping' aspects together. Unsure if this is an issue yet though.
+
+## Next Step - Policies

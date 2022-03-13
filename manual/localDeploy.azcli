@@ -1,0 +1,8 @@
+az login
+
+# management subscription
+az account set --subscription 3f22e890-4c99-430e-a8dd-4ca7715db048
+
+az account show
+
+az deployment tenant create --template-file bicep/management.bicep --location "UK South"
