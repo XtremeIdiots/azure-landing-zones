@@ -66,3 +66,5 @@ also a local script to run this: [manual/localDeploy.azcli](/manual/localDeploy.
 There is a 'weirdness' or potential anti-pattern here as in the examples there is the ability to breakdown the pipeline with a task per deployment whereas this is 'grouping' aspects together. Unsure if this is an issue yet though.
 
 ## Next Step - Policies
+
+First stage of this is to add the custom policy definitions - this is a straightforward add. We then need to dive into the assignments, There are some default enterprise scale policies that I do not want etc.
