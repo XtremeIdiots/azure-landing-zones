@@ -78,3 +78,21 @@ This is a straightforward module add. It is highlighting though the need to have
 ## Next Steps - Core Hub Network
 
 Skipping this one as the XtremeIdiots platform is PaaS only and low/minimal cost.
+
+## Next Steps - Role Assignments
+
+The ALZ-Bicep resources contain several modules here, one for Management Groups, Subscriptions and then a 'Many' for each.
+
+Skipping this one temporarily.
+
+## Next Steps - Subscription Placement
+
+The implementation for this one was educational as far as referencing outputs from previously run modules etc. Very simple and the intellisense was helpful - easier than terraform for sure.
+
+I did also learn the need for dependsOn as there were conflicting deployments etc, so have gone through and added them in. The ALZ-Bicep example was lacking in that it only shows one usage here.
+
+I don't like the naming of the parTargetManagementGroupId param also as it's not the ID but the name it is looking for. Oh well.
+
+Additionally, this is probably where I would want to start splitting stuff out into more logical deployment phases.
+
+## Next Steps - Policy Assignments
