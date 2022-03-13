@@ -44,4 +44,4 @@ So, for now it looks like I need to host these 'modules' myself in an Azure Cont
 
 Trying those scripts out though results in not all of the modules being deployed so have raised an [issue](https://github.com/Azure/ALZ-Bicep/issues/186).
 
-Fundementally it is not clear what the best practice is though so have also raised a [question](https://github.com/Azure/ALZ-Bicep/issues/187).
+Fundamentally it is not clear what the best practice is though so have also raised a [question](https://github.com/Azure/ALZ-Bicep/issues/187).
