@@ -74,3 +74,7 @@ Didn't clock that the assignments aren't until further down in the process, as s
 ## Next Steps - Logging
 
 This is a straightforward module add. It is highlighting though the need to have a parameters file for this management.bicep I have. Also raises questions on if I am putting too much into this file and losing the modular approach.
+
+## Next Steps - Core Hub Network
+
+Skipping this one as the XtremeIdiots platform is PaaS only and low/minimal cost.
