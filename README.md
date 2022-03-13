@@ -7,6 +7,7 @@ This repository contains the implementation of enterprise scale landing zones fo
 ## Quick Links
 
 * [ALZ Bicep Module](https://github.com/Azure/ALZ-Bicep)
+* [Repo Documentation](./docs/index.md)
 
 ---
 
