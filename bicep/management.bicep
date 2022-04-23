@@ -60,8 +60,8 @@ module subscriptionPlacementManagement 'br:acrxibicepprivate.azurecr.io/bicep/mo
   scope: managementGroup('alz')
   params: {
     parSubscriptionIds: [
-      'b2b3132f-92b4-448c-adf3-c763056f8e94' //Mgmt-Core-PayAsYouGo
-      '3f22e890-4c99-430e-a8dd-4ca7715db048' //sub-elz-platform-management
+      'b2b3132f-92b4-448c-adf3-c763056f8e94' //sub-legacy-platform-management
+      '3f22e890-4c99-430e-a8dd-4ca7715db048' //sub-lz-platform-management
     ]
     parTargetManagementGroupId: managementGroups.outputs.outPlatformManagementMGName
   }
@@ -75,7 +75,7 @@ module subscriptionPlacementIdentity 'br:acrxibicepprivate.azurecr.io/bicep/modu
   scope: managementGroup('alz')
   params: {
     parSubscriptionIds: [
-      'ead28369-b42c-44bb-afbc-cc39c8b7f05a' //Mgmt-Identity-PayAsYouGo
+      'ead28369-b42c-44bb-afbc-cc39c8b7f05a' //sub-lz-platform-identity
     ]
     parTargetManagementGroupId: managementGroups.outputs.outPlatformIdentityMGName
   }
@@ -89,8 +89,8 @@ module subscriptionPlacementOnlineLandingZone 'br:acrxibicepprivate.azurecr.io/b
   scope: managementGroup('alz')
   params: {
     parSubscriptionIds: [
-      '67f63261-8bcc-4a50-9341-d6e32884b382' //Portal-Dev-PayAsYouGo
-      'edcc79a0-72ac-4d5a-b73d-fba2fdab332c' //Portal-Prd-PayAsYouGo
+      '67f63261-8bcc-4a50-9341-d6e32884b382' //sub-lz-portal-dev
+      'edcc79a0-72ac-4d5a-b73d-fba2fdab332c' //sub-lz-portal-prd
     ]
     parTargetManagementGroupId: managementGroups.outputs.outLandingZonesOnlineMGName
   }
@@ -104,7 +104,7 @@ module subscriptionPlacementSandbox 'br:acrxibicepprivate.azurecr.io/bicep/modul
   scope: managementGroup('alz')
   params: {
     parSubscriptionIds: [
-      'e8ae2a77-9893-4a9a-a2eb-98e68ad8b94e' //Sandbox-PayAsYouGo
+      'e8ae2a77-9893-4a9a-a2eb-98e68ad8b94e' //sub-lz-sandbox
     ]
     parTargetManagementGroupId: managementGroups.outputs.outSandboxMGName
   }
