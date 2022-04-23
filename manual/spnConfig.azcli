@@ -1,0 +1,1 @@
+az role assignment create --scope '/' --role 'Owner' --assignee-object-id '13855f92-1514-4e6b-9a85-2088e63774d4' --assignee-principal-type ServicePrincipal
