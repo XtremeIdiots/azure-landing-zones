@@ -13,19 +13,20 @@ resources:
       endpoint: XtremeIdiots
 
 stages:
-  - stage: Deploy
+- stage: deploy
+  jobs:
+  - job: deploy
+    pool:
+      vmImage: 'linux-latest'
 
-    jobs:
-    
-    - job:
-      steps:
-        - task: AzureCLI@2
-          displayName: Az CLI Deploy Management Bicep
-          inputs:
-            azureSubscription: spn-azure-landing-zones
-            scriptType: 'bash'
-            scriptLocation: 'inlineScript'
-            inlineScript: |
-              az deployment tenant create \
-              --template-file bicep/management.bicep \
-              --location "UK South"
+    steps:
+      - task: AzureCLI@2
+        displayName: Az CLI Deploy Management Bicep
+        inputs:
+          azureSubscription: spn-azure-landing-zones
+          scriptType: 'bash'
+          scriptLocation: 'inlineScript'
+          inlineScript: |
+            az deployment tenant create \
+            --template-file bicep/management.bicep \
+            --location "UK South"
