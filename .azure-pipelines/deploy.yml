@@ -1,0 +1,31 @@
+trigger:
+  branches:
+    include:
+    - 'main'
+
+pr: none
+
+resources:
+  repositories:
+    - repository: ado-pipeline-templates
+      type: github
+      name: XtremeIdiots/ado-pipeline-templates
+      endpoint: XtremeIdiots
+
+stages:
+  - stage: Deploy
+
+    jobs:
+    
+    - job:
+      steps:
+        - task: AzureCLI@2
+          displayName: Az CLI Deploy Management Bicep
+          inputs:
+            azureSubscription: spn-azure-landing-zones
+            scriptType: 'bash'
+            scriptLocation: 'inlineScript'
+            inlineScript: |
+              az deployment tenant create \
+              --template-file bicep/management.bicep \
+              --location "UK South"
